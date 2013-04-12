@@ -1,0 +1,21 @@
+extends layout
+
+append scripts
+	script(type="text/javascript", src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+	script(type="text/javascript", src="//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.10/socket.io.min.js")
+	script(type="text/javascript", src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js")
+	script(type="text/javascript", src="js/rob.js")
+
+
+block content
+	h1= title
+	#hero
+		#currentCount
+		button#report Report
+		button#contest Contest
+	p People Listening:
+		#currentListeners
+	P Last Reported By: 
+		#lastReported
+	p Last Contested By:
+		#lastContested
